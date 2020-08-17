@@ -1,0 +1,67 @@
+root@tryit-moving:~# mkdir sinha                                                                                                                       
+root@tryit-moving:~# ls -l                                                                                                                             
+total 0                                                                                                                                                
+drwxr-xr-x 1 root root 0 Aug 10 09:31 sinha                                                                                                            
+root@tryit-moving:~# cat > demo                                                                                                                        
+ls -l                                                                                                                                                  
+Hello                                                                                                                                                  
+^Z                                                                                                                                                     
+[1]+  Stopped                 cat > demo                                                                                                               
+root@tryit-moving:~# cat demo                                                                                                                          
+ls -l                                                                                                                                                  
+Hello   
+root@tryit-moving:~# cp demo demo1                                                                                                                     
+root@tryit-moving:~# ls -l                                                                                                                             
+total 8                                                                                                                                                
+-rw-r--r-- 1 root root 12 Aug 10 09:31 demo                                                                                                            
+-rw-r--r-- 1 root root 12 Aug 10 09:33 demo1                                                                                                           
+drwxr-xr-x 1 root root  0 Aug 10 09:31 sinha                                                                                                           
+root@tryit-moving:~# mv demo1 /root/sinha                                                                                                              
+root@tryit-moving:~# ls -l                                                                                                                             
+total 4                                                                                                                                                
+-rw-r--r-- 1 root root 12 Aug 10 09:31 demo                                                                                                            
+drwxr-xr-x 1 root root 10 Aug 10 09:34 sinha  
+root@tryit-moving:~# mv demo /root/sinha/pps                                                                                                           
+root@tryit-moving:~# ls -l                                                                                                                             
+total 0                                                                                                                                                
+drwxr-xr-x 1 root root 16 Aug 10 09:35 sinha 
+
+root@tryit-moving:~# cat > demo2                                                                                                                       
+ls -l                                                                                                                                                  
+Hii                                                                                                                                                    
+^Z                                                                                                                                                     
+[2]+  Stopped                 cat > demo2                                                                                                              
+root@tryit-moving:~# chmod 777 demo2                                                                                                                   
+root@tryit-moving:~# ls -l                                                                                                                             
+total 4                                                                                                                                                
+-rwxrwxrwx 1 root root 10 Aug 10 09:41 demo2                                                                                                           
+drwxr-xr-x 1 root root 16 Aug 10 09:35 sinha
+
+root@tryit-moving:~# ps                                                                                                                                
+  PID TTY          TIME CMD                                                                                                                            
+  178 ?        00:00:00 bash                                                                                                                           
+  183 ?        00:00:00 cat                                                                                                                            
+  192 ?        00:00:00 cat                                                                                                                            
+  195 ?        00:00:00 ps   
+
+root@tryit-moving:~# ps                                                                                                                                
+  PID TTY          TIME CMD                                                                                                                            
+  178 ?        00:00:00 bash                                                                                                                           
+  183 ?        00:00:00 cat                                                                                                                            
+  192 ?        00:00:00 cat                                                                                                                            
+  195 ?        00:00:00 ps        
+root@tryit-session:~#
+                                                                                                                                                       
+[4]+  Stopped                 cat > dem01                                                                                                              
+root@tryit-proven:~# kill -9 211                                                                                                                       
+root@tryit-proven:~# ps -f                                                                                                                             
+UID        PID  PPID  C STIME TTY          TIME CMD                                                                                                    
+root       147     0  0 09:00 ?        00:00:00 bash                                                                                                   
+root       186   147  0 09:02 ?        00:00:00 cat                                                                                                    
+root       196   147  0 09:06 ?        00:00:00 cat                                                                                                    
+root       197   147  0 09:06 ?        00:00:00 cat                                                                                                    
+root       214   147  0 09:15 ?        00:00:00 ps -f                                                                                                  
+[4]+  Killed                  cat > dem01                                                                                                              
+
+
+                                                                                                                                                       
